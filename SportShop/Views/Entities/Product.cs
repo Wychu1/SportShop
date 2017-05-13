@@ -15,6 +15,8 @@ namespace SportShop.Views.Entities
 
         public decimal Price { get; set; }
 
+
+        // virtual jeśli jako właściwość podajemy inną encję, np. Category w Product
         public virtual Category Category { get; set; }
 
     }

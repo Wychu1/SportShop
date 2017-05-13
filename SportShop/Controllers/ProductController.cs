@@ -4,8 +4,10 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Antlr.Runtime;
+using SportShop.DAL;
 using SportShop.Models;
 using SportShop.Repositories;
+using SportShop.Views.Entities;
 
 namespace SportShop.Controllers
 {
@@ -33,6 +35,20 @@ namespace SportShop.Controllers
 
         public ActionResult List()
         {
+            using (var db = new SportShopContext())
+            {
+                var customer = new Customer
+                {
+                    Email = "sds",
+                    LastName = "asdas",
+                    Name = "asddsa",
+                    Phone = "123",
+                    Sex = Sex.Female
+                };
+                db.Customers.Add(customer);
+                db.SaveChanges();
+            }
+
             var items = _repository.GetProducts();
             var model = new ProductGridModel()
             {
