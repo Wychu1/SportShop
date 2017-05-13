@@ -116,3 +116,7 @@ c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Micr
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.csprojResolveAssemblyReference.cache
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.dll
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.pdb
+C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Core.dll
+C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Windsor.dll
+C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Core.xml
+C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Windsor.xml

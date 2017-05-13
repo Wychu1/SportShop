@@ -11,8 +11,18 @@ namespace SportShop.Controllers
 {
     public class ProductController : Controller
     {
-        private readonly IProductRepository _repository = new ProductInMemoryRepository();
-        // GET: Product
+        
+        //private readonly IProductRepository _repository = new ProductInMemoryRepository();
+
+        //Nie musimy już tworzyć nowej instancji, odwołujemy się do kontenera.
+        private readonly IProductRepository _repository;
+
+
+
+        public ProductController(IProductRepository repository)
+        {
+            _repository = repository;
+        }
 
 
         public ActionResult Index()
