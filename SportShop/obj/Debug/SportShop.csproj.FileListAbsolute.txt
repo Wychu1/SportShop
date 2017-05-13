@@ -119,3 +119,4 @@ C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Cast
 C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Windsor.dll
 C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Core.xml
 C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Windsor.xml
+C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.csprojResolveAssemblyReference.cache
