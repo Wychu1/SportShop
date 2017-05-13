@@ -35,19 +35,19 @@ namespace SportShop.Controllers
 
         public ActionResult List()
         {
-            using (var db = new SportShopContext())
-            {
-                var customer = new Customer
-                {
-                    Email = "sds",
-                    LastName = "asdas",
-                    Name = "asddsa",
-                    Phone = "123",
-                    Sex = Sex.Female
-                };
-                db.Customers.Add(customer);
-                db.SaveChanges();
-            }
+            //using (var db = new SportShopContext())
+            //{
+            //    var customer = new Customer
+            //    {
+            //        Email = "sds",
+            //        LastName = "asdas",
+            //        Name = "asddsa",
+            //        Phone = "123",
+            //        Sex = Sex.Female
+            //    };
+            //    db.Customers.Add(customer);
+            //    db.SaveChanges();
+            //}
 
             var items = _repository.GetProducts();
             var model = new ProductGridModel()

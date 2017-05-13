@@ -229,6 +229,7 @@
     <Compile Include="Models\CustomerGridViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\ProductAddViewModel.cs" />
     <Compile Include="Models\ProductGridViewModel.cs" />
     <Compile Include="Models\ProductDetailsViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -236,6 +237,7 @@
     <Compile Include="Repositories\IcustomerRepository.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\ProductInMemoryRepository.cs" />
+    <Compile Include="Repositories\ProductRepository.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Views\Entities\Category.cs" />
     <Compile Include="Views\Entities\Customer.cs" />

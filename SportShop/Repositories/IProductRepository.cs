@@ -11,5 +11,7 @@ namespace SportShop.Repositories
         IEnumerable<ProductGridViewModel> GetProducts();
 
         ProductDetailsViewModel Get(long id);
+
+        void Add(ProductAddViewModel model);
     }
 }
