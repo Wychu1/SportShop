@@ -1,0 +1,23 @@
+﻿@model SportShop.Models.ProductDetailsViewModel
+
+
+<h2>Edit Product</h2>
+<div class="container">
+    <div class="row">
+        <div class="col col-xs-12">
+            @Html.HiddenFor(m => m.Id)
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new {@class = "form-control"})
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Price)
+                @Html.TextBoxFor(m => m.Price, new {@class = "form-control"})
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+            @Html.ActionLink("Cancel", "List", null, new { @class = "btn btn-primary" })
+            @Html.ValidationSummary()
+        </div>
+    </div>
+</div>
