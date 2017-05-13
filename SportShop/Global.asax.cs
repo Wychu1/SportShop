@@ -13,15 +13,17 @@ namespace SportShop
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        //konfiguracja kontrolera
+        //konfiguracja kontrolera,
         private static IWindsorContainer _container;
         
         //tworzy kontener, instaluje wszystkie kontrolery z tego assembly i tworzy obiekt klasy WindsorControllerFactory i podmienia w ControllerBuilder defaultowy zestaw kontrolerów naszymi.
 
         private static void BootstrapContainer()
         {
+            //WindsorControllerFactory tworzy obiekt poprzez pobranie go z kontenera
             _container = new WindsorContainer().Install(FromAssembly.This());
             
+            //podmienia defaultowe kontrolery z naszym
             var controllerFactory = new WindsorControllerFactory(_container.Kernel);
             ControllerBuilder.Current.SetControllerFactory(controllerFactory);
         }

@@ -16,6 +16,7 @@ namespace SportShop.Infrastructure
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(Component.For<IProductRepository>().ImplementedBy<ProductInMemoryRepository>());
+            container.Register(Component.For<ICustomerRepository>().ImplementedBy<CustomerInMemoryRepository>());
         }
     }
 }

@@ -15,9 +15,9 @@ namespace SportShop.Controllers
         //private readonly IProductRepository _repository = new ProductInMemoryRepository();
 
         //Nie musimy już tworzyć nowej instancji, odwołujemy się do kontenera.
+
+        //Dependency Injection
         private readonly IProductRepository _repository;
-
-
 
         public ProductController(IProductRepository repository)
         {

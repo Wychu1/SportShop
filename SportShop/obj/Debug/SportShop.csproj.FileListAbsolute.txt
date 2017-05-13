@@ -113,7 +113,6 @@ c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Enti
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Microsoft.AspNet.Identity.Core.xml
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Microsoft.AspNet.Identity.Owin.xml
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.csprojResolveAssemblyReference.cache
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.dll
 c:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\obj\Debug\SportShop.pdb
 C:\Users\RENT\Documents\Visual Studio 2015\Projects\SportShop\SportShop\bin\Castle.Core.dll
