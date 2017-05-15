@@ -48,7 +48,7 @@ namespace SportShop.Repositories
                 Name = model.Name,
                 Description = model.Description,
                 Price = model.Price,
-                Category = _context.Categories.Single(x => x.Id == model.CategoryId)
+                Category = model.CategoryId
 
             };
 

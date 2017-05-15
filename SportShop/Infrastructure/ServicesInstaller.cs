@@ -16,7 +16,7 @@ namespace SportShop.Infrastructure
         //Dla interfejsu IProductRepository zwraca klasę ProductInMemoryRepository
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
-            container.Register(Component.For<IProductRepository>().ImplementedBy<ProductInMemoryRepository>());
+            container.Register(Component.For<IProductRepository>().ImplementedBy<ProductRepository>());
 
             container.Register(Component.For<SportShopContext>());
 

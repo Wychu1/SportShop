@@ -83,6 +83,27 @@ namespace SportShop.Controllers
 
             return View(model);
         }
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            var model = new ProductAddViewModel();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Add(ProductAddViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _repository.Add(model);
+                return RedirectToAction("List");
+            }
+
+            return View(model);
+        }
+
     }
 
     public class ProductGridModel
@@ -91,5 +112,6 @@ namespace SportShop.Controllers
 
         public IEnumerable<ProductGridViewModel> Items { get; set; }
     }
+    
 
 }

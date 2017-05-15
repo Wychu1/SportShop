@@ -50,5 +50,10 @@ namespace SportShop.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public void Save(ProductAddViewModel model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
