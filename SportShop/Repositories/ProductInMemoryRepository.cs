@@ -45,5 +45,10 @@ namespace SportShop.Repositories
                 Price = 200
             };
         }
+
+        public void Add(ProductAddViewModel model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
