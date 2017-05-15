@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using SportShop.DAL;
 using SportShop.Models;
+using SportShop.Views.Entities;
 
 namespace SportShop.Repositories
 {
@@ -42,7 +43,17 @@ namespace SportShop.Repositories
 
         public void Add(ProductAddViewModel model)
         {
-            
+            var product = new Product
+            {
+                Name = model.Name,
+                Description = model.Description,
+                Price = model.Price,
+                Category = _context.Categories.Single(x => x.Id == model.CategoryId)
+
+            };
+
+            _context.Products.Add(product);
+            _context.SaveChanges();
         }
     }
 }
