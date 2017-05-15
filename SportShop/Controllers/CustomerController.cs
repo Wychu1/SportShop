@@ -17,6 +17,7 @@ namespace SportShop.Controllers
         {
             _repository = repository;
         }
+
         // GET: Customer
         public ActionResult Index()
         {
@@ -32,6 +33,28 @@ namespace SportShop.Controllers
 
 
         }
-    }
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            var model = new AddCustomerViewModel();
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Add(AddCustomerViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _repository.Save(model);
+                return RedirectToAction("List");
+            }
+
+            return View(model);
+        }
     
+}
+
+
 }

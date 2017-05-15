@@ -34,5 +34,10 @@ namespace SportShop.Repositories
                 }
             };
         }
+
+        public void Save(AddCustomerViewModel model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -9,5 +9,6 @@ namespace SportShop.Repositories
     public interface ICustomerRepository
     {
         IEnumerable<CustomerGridViewModel> GetCustomers();
+        void Save(AddCustomerViewModel model);
     }
 }
