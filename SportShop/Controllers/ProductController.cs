@@ -20,10 +20,12 @@ namespace SportShop.Controllers
 
         //Dependency Injection
         private readonly IProductRepository _repository;
+        private readonly ICategoryRepository _categoryRepository;
 
-        public ProductController(IProductRepository repository)
+        public ProductController(IProductRepository repository, ICategoryRepository categoryRepository)
         {
             _repository = repository;
+            _categoryRepository = categoryRepository;
         }
 
 
@@ -87,7 +89,10 @@ namespace SportShop.Controllers
         [HttpGet]
         public ActionResult Add()
         {
-            var model = new ProductAddViewModel();
+            var model = new ProductAddViewModel
+            {
+                Categories = _categoryRepository.GetCategories()
+            };
 
             return View(model);
         }
@@ -100,7 +105,7 @@ namespace SportShop.Controllers
                 _repository.Add(model);
                 return RedirectToAction("List");
             }
-
+            model.Categories = _categoryRepository.GetCategories();
             return View(model);
         }
 

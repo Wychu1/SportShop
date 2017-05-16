@@ -53,8 +53,12 @@ namespace SportShop.Controllers
 
             return View(model);
         }
-    
-}
+
+        //public ActionResult Edit(long id)
+        //{
+            
+        //}
+    }
 
 
 }

@@ -21,6 +21,7 @@ namespace SportShop.Infrastructure
             container.Register(Component.For<SportShopContext>());
 
             container.Register(Component.For<ICustomerRepository>().ImplementedBy<CustomerRepository>());
+            container.Register(Component.For<ICategoryRepository>().ImplementedBy<CategoriesRepository>());
         }
     }
 }

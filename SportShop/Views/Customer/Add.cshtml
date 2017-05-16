@@ -1,17 +1,7 @@
 ﻿@model SportShop.Models.AddCustomerViewModel
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Add</title>
-</head>
-<body>
     @using (Html.BeginForm()) 
     {
-        @Html.AntiForgeryToken()
-        
         <div class="form-horizontal">
             <h4>Add new customer</h4>
             <hr />
@@ -65,5 +55,3 @@
     <div>
         @Html.ActionLink("Back to List", "List")
     </div>
-</body>
-</html>

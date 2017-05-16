@@ -24,6 +24,7 @@
         <tr>
             <td>@customer.Id</td>
             <td>@customer.Name</td>
+            <td>@Html.ActionLink("Edycja", "Edit", new { id = customer.Id }, new { @class = "btn btn-primary" })</td>
             
         </tr>
     }

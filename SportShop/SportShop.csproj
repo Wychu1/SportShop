@@ -227,7 +227,9 @@
     <Compile Include="Infrastructure\WindsorControllerFactory.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddCustomerViewModel.cs" />
+    <Compile Include="Models\CategoryViewModel.cs" />
     <Compile Include="Models\CustomerGridViewModel.cs" />
+    <Compile Include="Models\EditCustomerViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ProductAddViewModel.cs" />
@@ -237,6 +239,7 @@
     <Compile Include="Repositories\CategoriesRepository.cs" />
     <Compile Include="Repositories\CustomerInMemoryRepository.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\ICategoryRepository.cs" />
     <Compile Include="Repositories\IcustomerRepository.cs" />
     <Compile Include="Repositories\IProductRepository.cs" />
     <Compile Include="Repositories\ProductInMemoryRepository.cs" />

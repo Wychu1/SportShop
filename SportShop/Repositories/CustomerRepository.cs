@@ -40,5 +40,19 @@ namespace SportShop.Repositories
             _dbContext.Customers.Add(customer);
             _dbContext.SaveChanges();
         }
+
+        public void Edit(Customer model)
+        {
+            var customer = new Customer
+            {
+                Name = model.Name,
+                LastName = model.LastName,
+                Email = model.Email,
+                Sex = model.Sex,
+                Phone = model.Phone
+            };
+
+            
+        }
     }
 }
