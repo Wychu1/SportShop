@@ -22,7 +22,11 @@ namespace SportShop.Repositories
             return _dbContext.Customers.Select(x => new CustomerGridViewModel
             {
                 Id = x.Id,
-                Name = x.Name + " " + x.LastName
+                Name = x.Name + " " + x.LastName,
+                LastName = x.LastName,
+                Phone = x.Phone,
+                Email = x.Email
+
             });
         }
 
@@ -53,6 +57,43 @@ namespace SportShop.Repositories
             };
 
             
+        }
+
+        public CustomerEditViewModel Get(long Id)
+        {
+            return _dbContext.Customers.Where(x => x.Id == Id)
+                .Select(x => new CustomerEditViewModel
+                {
+                    Id = x.Id,
+                    LastName = x.LastName,
+                    Name = x.Name,
+                    Phone = x.Phone
+                })
+                .Single();
+        }
+
+        public void Update(CustomerEditViewModel model)
+        {
+            var customer = _dbContext.Customers.Single(x => x.Id == model.Id);
+
+            customer.LastName = model.LastName;
+            customer.Name = model.Name;
+            customer.Phone = model.Phone;
+
+            _dbContext.SaveChanges();
+        }
+
+        public void Delete(long Id)
+        {
+            //var deleteCustomer = _dbContext.Customers.Find(Id);
+            //var customer = _dbContext.Customers;
+
+            //customer.Remove(deleteCustomer);
+            //
+
+            var customer = _dbContext.Customers.Single(x => x.Id == Id);
+            _dbContext.Customers.Remove(customer);
+            _dbContext.SaveChanges();
         }
     }
 }

@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using SportShop.Models;
 using SportShop.Repositories;
+using SportShop.Views.Entities;
 
 namespace SportShop.Controllers
 {
@@ -54,10 +55,31 @@ namespace SportShop.Controllers
             return View(model);
         }
 
-        //public ActionResult Edit(long id)
-        //{
-            
-        //}
+        public ActionResult Edit(long id)
+        {
+            var model = _repository.Get(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(CustomerEditViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                _repository.Update(model);
+                return RedirectToAction("List");
+            }
+
+            return View(model);
+        }
+        [HttpPost]
+        public ActionResult Delete(long id)
+        {
+            _repository.Delete(id);
+
+            return RedirectToAction("List");
+        }
     }
 
 

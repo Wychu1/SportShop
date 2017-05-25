@@ -39,5 +39,20 @@ namespace SportShop.Repositories
         {
             throw new NotImplementedException();
         }
+
+        public CustomerEditViewModel Get(long Id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(CustomerEditViewModel model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(long Id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

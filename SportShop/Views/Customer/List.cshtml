@@ -12,22 +12,34 @@
         <col />
     </colgroup>
     <thead>
-        <tr>
-            <th>Id</th>
-            <th>Nazwa</th>
-        </tr>
+    <tr>
+        <th>Id</th>
+        <th>Imie</th>
+        <th>Nazwisko</th>
+        <th>Telefon</th>
+    </tr>
     </thead>
     <tbody>
-@{
-            foreach (var customer in Model)
-            {
-        <tr>
-            <td>@customer.Id</td>
-            <td>@customer.Name</td>
-            <td>@Html.ActionLink("Edycja", "Edit", new { id = customer.Id }, new { @class = "btn btn-primary" })</td>
-            
+    @{
+        foreach (var customer in Model)
+        {
+            <tr>
+                <td>@customer.Id</td>
+                <td>@customer.Name</td>
+                <td>@customer.LastName</td>
+                <td>@customer.Phone</td>
+                <td>
+                    @Html.ActionLink("Edycja", "Edit", new { id = customer.Id }, new { @class = "btn btn-primary" })
+                @using (Html.BeginForm("Delete", "Customer"))
+                {
+                    @Html.Hidden("Id", customer.Id)
+                    <button type="submit">Delete</button>
+                }
+            </td>
         </tr>
+        }
+
+
     }
-}
     </tbody>
 </table>

@@ -1,7 +1,9 @@
-﻿@model SportShop.Models.ProductGridViewModel
+﻿@using SportShop.Views.Entities
+@model SportShop.Models.ProductGridViewModel
     
 <tr>
     <th>@Model.Id</th>
     <th>@Html.ActionLink(@Model.Name,"GetProduct","Product", new {productId = @Model.Id}, null)</th>
     <th>@Model.Price.ToString("C")</th>
+    <th>@Html.ActionLink("Edycja", "Edit", new { productId = @Model.Id }, new { @class = "btn btn-primary" })</th>
 </tr>

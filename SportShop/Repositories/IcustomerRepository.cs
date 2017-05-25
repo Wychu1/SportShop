@@ -10,5 +10,8 @@ namespace SportShop.Repositories
     {
         IEnumerable<CustomerGridViewModel> GetCustomers();
         void Save(AddCustomerViewModel model);
+        CustomerEditViewModel Get(long Id);
+        void Update(CustomerEditViewModel model);
+        void Delete(long Id);
     }
 }

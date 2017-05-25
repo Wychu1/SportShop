@@ -228,8 +228,8 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AddCustomerViewModel.cs" />
     <Compile Include="Models\CategoryViewModel.cs" />
+    <Compile Include="Models\CustomerEditViewModel.cs" />
     <Compile Include="Models\CustomerGridViewModel.cs" />
-    <Compile Include="Models\EditCustomerViewModel.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ProductAddViewModel.cs" />
@@ -328,6 +328,7 @@
     <Content Include="Views\Customer\List.cshtml" />
     <Content Include="Views\Customer\Add.cshtml" />
     <Content Include="Views\Product\Add.cshtml" />
+    <Content Include="Views\Customer\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
